@@ -20,6 +20,8 @@ except ImportError:
 
 
 # Paths to Chinese-capable fonts. Adjust to your environment.
+# TODO： My chinese ENV is still not working well, need to fix later.
+
 FONT_PATHS = [
     "NotoSansCJK-Regular.ttc",                     # local file
     "NotoSansCJK-Regular.otf",
@@ -119,7 +121,7 @@ def compute_similarity(img1, img2, hash_size=16, use_blur=True):
 
 # ---------- OCR: full-image + box matching ----------
 
-def run_full_image_ocr(img, min_score=0.5):
+def run_full_image_ocr(img, min_score=0.3):
     """
     Run OCR on a preprocessed (upscaled + contrast-enhanced) version
     of the whole image with EasyOCR.
